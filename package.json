@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/olso/opc-via-udp/issues"
   },
-  "homepage": "https://github.com/olso/opc-via-udp#readme"
+  "homepage": "https://github.com/olso/opc-via-udp#readme",
+  "dependencies": {
+    "lodash.flattendeep": "^4.4.0"
+  }
 }

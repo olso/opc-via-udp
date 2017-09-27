@@ -16,13 +16,15 @@ function createOpcPacket(stripLength = 2, pixels = [255, 255, 255, 0, 0, 0]) {
         0, // low byte
     ]
 
+    const normalizedPixels = flattenDeep(pixels)
+
     const packet = [
         ...header,
-        ...flattenDeep(pixels)
+        ...normalizedPixels
     ]
 
-    packet[2] = pixels.length >> 8 // high byte
-    packet[3] = pixels.length & 255 // low byte
+    packet[2] = normalizedPixels.length >> 8 // high byte
+    packet[3] = normalizedPixels.length & 255 // low byte
 
     return new Buffer(packet)
 }

@@ -1,0 +1,26 @@
+{
+  "name": "opc-via-udp",
+  "version": "1.0.0",
+  "description": "Open Pixel Control via UDP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olso/opc-via-udp.git"
+  },
+  "keywords": [
+    "opc",
+    "udp",
+    "open",
+    "pixel",
+    "control"
+  ],
+  "author": "olso <olsansky.martin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olso/opc-via-udp/issues"
+  },
+  "homepage": "https://github.com/olso/opc-via-udp#readme"
+}

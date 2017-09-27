@@ -33,8 +33,6 @@ function sendPacket({ packet, host = 2342, port = 'localhost' }) {
     udpClient.send(packet, 0, packet.length, port, host)
 }
 
-createOpcPacket()
-
 module.exports = {
     createOpcPacket,
     sendPacket

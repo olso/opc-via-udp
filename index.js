@@ -21,8 +21,6 @@ function createOpcPacket(stripLength = 2, pixels = [255, 255, 255, 0, 0, 0]) {
         ...flattenDeep(pixels)
     ]
 
-    console.log(packet)
-
     packet[2] = pixels.length >> 8 // high byte
     packet[3] = pixels.length & 255 // low byte
 

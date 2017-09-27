@@ -1,2 +1,2 @@
-# opc-over-udp
-Open Pixel Control over UDP
+# opc-via-udp
+Open Pixel Control via UDP

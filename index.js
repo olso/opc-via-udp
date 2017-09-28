@@ -1,9 +1,8 @@
 const { createSocket } = require('dgram')
-const flattenDeep = require('lodash.flattendeep')
-
-const udpClient = createSocket('udp4')
 
 /**
+ * pixels must be depth=0 Array
+ *
  * @param {Number} stripLength
  * @param {Number[]} pixels
  * @returns {Buffer}
@@ -16,24 +15,24 @@ function createOpcPacket(stripLength = 2, pixels = [255, 255, 255, 0, 0, 0]) {
         0, // low byte
     ]
 
-    const normalizedPixels = flattenDeep(pixels)
+    const packet = [ ...header, ...pixels ]
 
-    const packet = [
-        ...header,
-        ...normalizedPixels
-    ]
-
-    packet[2] = normalizedPixels.length >> 8 // high byte
-    packet[3] = normalizedPixels.length & 255 // low byte
+    packet[2] = pixels.length >> 8  // high byte
+    packet[3] = pixels.length & 255 // low byte
 
     return new Buffer(packet)
 }
 
-function sendPacket({ packet, host = 2342, port = 'localhost' }) {
-    udpClient.send(packet, 0, packet.length, port, host)
+function createUdpClient() {
+    return createSocket('udp4')
+}
+
+function sendPacket({ client, packet, host = 2342, port = 'localhost' }) {
+    client.send(packet, 0, packet.length, port, host)
 }
 
 module.exports = {
     createOpcPacket,
+    createUdpClient,
     sendPacket
 }

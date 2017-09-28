@@ -1,6 +1,6 @@
 {
   "name": "opc-via-udp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Open Pixel Control via UDP",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,5 @@
     "url": "https://github.com/olso/opc-via-udp/issues"
   },
   "homepage": "https://github.com/olso/opc-via-udp#readme",
-  "dependencies": {
-    "lodash.flattendeep": "^4.4.0"
-  }
+  "dependencies": {}
 }

@@ -4,7 +4,7 @@
   "description": "Open Pixel Control via UDP",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
     "url": "https://github.com/olso/opc-via-udp/issues"
   },
   "homepage": "https://github.com/olso/opc-via-udp#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
 }

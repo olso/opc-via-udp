@@ -1,6 +1,6 @@
 {
   "name": "opc-via-udp",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Open Pixel Control via UDP",
   "main": "index.js",
   "scripts": {
